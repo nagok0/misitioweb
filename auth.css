@@ -1,0 +1,291 @@
+/* Fondo centrado con gradiente radial */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at center, #f2e7dc, #f7f7f7 80%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Contenedor del formulario */
+.form-container {
+  position: relative;
+  background: white;
+  padding: 60px 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Marca de agua ahora como título normal */
+.watermark {
+  position: static; /* quitar absolute */
+  font-size: 28px; /* tamaño más pequeño para título normal */
+  color: #b74d16; /* color sólido para texto visible */
+  margin-bottom: 20px; /* espacio debajo del título */
+  user-select: auto;
+  pointer-events: auto;
+  z-index: auto;
+  font-weight: bold;
+}
+
+
+/* Campos de entrada */
+#loginForm input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  z-index: 1;
+  position: relative;
+}
+
+#loginForm input:focus {
+  border-color: #b74d16;
+  outline: none;
+}
+
+/* Botón */
+button {
+  background-color: #b74d16;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #933a11;
+}
+
+/* Enlace de registro */
+p {
+  margin-top: 15px;
+  font-size: 14px;
+  z-index: 1;
+  position: relative;
+}
+
+a {
+  color: #b74d16;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+
+    body {
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at center, #f8e4d4, #e3a06f, #b74d16);
+      background-size: 400% 400%;
+      animation: expandGradient 10s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    @keyframes expandGradient {
+      0%, 100% { background-position: center; }
+      50% { background-position: center center; }
+    }
+
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #b74d16;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      background-color: #b74d16;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #933a11;
+    }
+
+    a {
+      color: #b74d16;
+      text-decoration: none;
+    }
+
+
+      /* Contenedor centrado del dashboard */
+.dashboard-container {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: auto;
+  margin-top: 10vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Texto del nombre de usuario */
+.dashboard-container h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Botones del dashboard */
+.button-group button {
+  background-color: #b74d16;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.3s;
+}
+
+.button-group button:hover {
+  background-color: #933a11;
+}
+
+
+
+      body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #fff;
+      border-right: 1px solid #eee;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+    }
+
+    .sidebar h2 {
+      color: #b74d16;
+      margin-bottom: 30px;
+      font-size: 22px;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #333;
+      background: #f2e7dc;
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: #e6d2c4;
+    }
+
+    .sidebar .logout-btn {
+      margin-top: auto;
+      background-color: #b74d16;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .sidebar .logout-btn:hover {
+      background-color: #933a11;
+    }
+
+    .content {
+      flex: 1;
+      padding: 40px;
+      background: radial-gradient(circle at center, #f2e7dc, #f7f7f7 80%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .sidebar {
+        position: fixed;
+        height: 100%;
+        transform: translateX(-100%);
+        z-index: 10;
+      }
+
+      .sidebar.active {
+        transform: translateX(0);
+      }
+
+      .menu-toggle {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 11;
+        color: #b74d16;
+      }
+    }
+
+    

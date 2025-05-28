@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio - CrowdEstudiantes</title>
+  <link rel="stylesheet" href="jeje.css">
+  <link rel="stylesheet" href="css/jeje.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <header>
+    <div><strong>CrowdEstudiantes</strong></div>
+    <nav>
+    </nav>
+  </header>
+
+  <div class="navbar">
+    <span id="usernameDisplay">Hola, Usuario</span>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div id="dropdownMenu" class="dropdown-menu">
+          <a href="crear.html">Crear campañas</a>
+          <a href="explorar.html">Explorar campañas</a>
+          <a href="perfil.html">Personalizar perfil</a>
+          <a href="#" onclick="logout()">Cerrar sesión</a>
+        </div>
+  </div>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Apoya proyectos que transforman tu comunidad</h1>
+      <p>Contribuye a ideas de jóvenes, escuelas y barrios que necesitan tu ayuda.</p>
+      <button class="explorar">Explorar campañas</button>
+      <button class="crear">Crear campaña</button>
+    </div>
+    <div class="hero-image">
+      <img src="../Crowdfunding/imagenes/jovenes.jpg" alt="Jóvenes trabajando en proyecto">
+    </div>
+  </section>
+
+  <section class="funciona">
+    <h2>¿Cómo funciona?</h2>
+    <div class="pasos">
+      <div class="paso">
+        <img src="https://img.icons8.com/ios-filled/50/document--v1.png" alt="Crear campaña">
+        <h3>Crea una campaña</h3>
+        <p>Describe tu proyecto, súbelo a la plataforma.</p>
+      </div>
+      <div class="paso">
+        <img src="https://img.icons8.com/ios-filled/50/like.png" alt="Recibir apoyo">
+        <h3>Recibe apoyo</h3>
+        <p>Comparte tu idea y recibe donaciones.</p>
+      </div>
+      <div class="paso">
+        <img src="https://img.icons8.com/ios-filled/50/flag.png" alt="Hazlo realidad">
+        <h3>Hazlo realidad</h3>
+        <p>Cumple tus metas y mejora tu comunidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <p>Cada donación es una semilla de cambio. ¡Comienza hoy!</p>
+    <button>Crear mi campaña ahora</button>
+  </section>
+
+  <footer>
+    © 2025 CrowdEstudiantes. Todos los derechos reservados.
+  </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script>
+    firebase.auth().onAuthStateChanged((user) => {
+      const userName = document.getElementById("userName");
+      const loginLink = document.getElementById("loginLink");
+      const logoutBtn = document.getElementById("logoutBtn");
+
+      if (user) {
+        userName.textContent = `Hola, ${user.displayName || user.email}`;
+        userName.style.display = "inline";
+        loginLink.style.display = "none";
+        logoutBtn.style.display = "inline-block";
+      } else {
+        userName.style.display = "none";
+        loginLink.style.display = "inline-block";
+        logoutBtn.style.display = "none";
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const logoutBtn = document.getElementById("logoutBtn");
+      if (logoutBtn) {
+        logoutBtn.addEventListener("click", () => {
+          firebase.auth().signOut().then(() => {
+            window.location.reload();
+          });
+        });
+      }
+    });
+     </script>
+
+     
+     <script>
+  function toggleMenu() {
+    const menu = document.getElementById('dropdownMenu');
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+  }
+
+  function logout() {
+    firebase.auth().signOut().then(() => {
+      window.location.href = 'login.html';
+    });
+  }
+
+  // Mostrar el nombre del usuario
+  firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+      document.getElementById('usernameDisplay').textContent = `Hola, ${user.displayName || user.email}`;
+    } else {
+      window.location.href = 'login.html';
+    }
+  });
+</script>
+
+
+</body>
+</html>

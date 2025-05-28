@@ -1,0 +1,250 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #222;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      padding: 60px 40px;
+      background-color: #f9f9f9;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .hero-text button {
+      padding: 12px 24px;
+      margin-right: 15px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .explorar {
+      background-color: #b74d16;
+      color: #fff;
+    }
+
+    .crear {
+      background-color: #2357d1;
+      color: #fff;
+    }
+
+    .hero-image {
+      flex: 1;
+      padding-left: 40px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .funciona {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .funciona h2 {
+      font-size: 2em;
+      margin-bottom: 40px;
+    }
+
+    .pasos {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .paso {
+      flex: 1;
+      max-width: 250px;
+    }
+
+    .paso img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+
+    .paso h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .cta p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .cta button {
+      background-color: #b74d16;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f0f0f0;
+      font-size: 0.9em;
+    }
+
+    #userName {
+  margin-right: 20px;
+  color: #b74d16;
+  font-weight: bold;
+}
+
+
+.user-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.user-menu button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.user-menu .dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 100;
+  width: 220px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user-menu .dropdown a,
+.user-menu .dropdown button {
+  display: block;
+  margin: 5px 0;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #333;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.user-menu .dropdown .perfil-box {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.user-menu .dropdown .perfil-box img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.user-menu .dropdown .perfil-box p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #fff;
+  border-radius: 0 0 0 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+#usernameDisplay {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #b74d16;
+}
+
+.menu-toggle {
+  cursor: pointer;
+  font-size: 24px;
+  user-select: none;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  flex-direction: column;
+  padding: 10px 0;
+  min-width: 180px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f2f2f2;
+  color: #b74d16;
+}

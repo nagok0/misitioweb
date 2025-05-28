@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="auth.css">
+  </head>
+
+  <body>
+    <div class="form-container">
+        <h2 class="watermark">Iniciar sesión</h2>
+        <form id="loginForm">
+          <input type="email" id="email" placeholder="Correo electrónico" required>
+          <input type="password" id="password" placeholder="Contraseña" required>
+          <button type="submit">Iniciar sesión</button>
+        </form>
+        <p>¿No tienes cuenta? <a href="register.html">Regístrate</a></p>
+    </div>
+
+
+      <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+      <script src="js/firebase-config.js"></script>
+      <script src="js/login.js"></script>
+  </body>
+</html>
