@@ -8,9 +8,11 @@
 <body>
   <div class="dashboard-container">
     <h1>Bienvenido, <span id="userName"></span>!</h1>
+    
     <div class="button-group">
       <button id="logoutBtn">Cerrar sesión</button>
       <button id="goHomeBtn">Ir al inicio</button>
+      <button id="profileBtn">Personalización de perfil</button>
     </div>
   </div>
 
@@ -22,16 +24,17 @@
   <script src="js/dashboard.js"></script>
 
   <script>
-    // Logout con botón
+    // Logout
     document.getElementById("logoutBtn").addEventListener("click", () => {
       firebase.auth().signOut().then(() => {
         window.location.href = 'login.html';
       });
     });
+
+    // Redirigir a perfil
+    document.getElementById("profileBtn").addEventListener("click", () => {
+      window.location.href = 'perfil.html';
+    });
   </script>
-
-      
-
-
 </body>
 </html>
