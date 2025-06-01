@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Crear campaña</title>
+  <link rel="stylesheet" href="crear-campaña.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Crear una campaña</h1>
+    <form id="campañaForm">
+      <label for="titulo">Título del proyecto</label>
+      <input type="text" id="titulo" placeholder="Escribe un título claro y conciso" required>
+
+      <label for="descripcion">Descripción del proyecto</label>
+      <textarea id="descripcion" placeholder="Describe tu proyecto en detalle" required></textarea>
+
+      <label for="meta">Meta</label>
+      <input type="number" id="meta" placeholder="Define una meta para tu proyecto" required>
+
+      <label for="categoria">Categoría</label>
+      <select id="categoria">
+        <option value="">Selecciona una categoría</option>
+        <option value="tecnologia">Tecnología</option>
+        <option value="arte">Arte</option>
+        <option value="educacion">Educación</option>
+      </select>
+
+      <label for="ubicacion">Ubicación</label>
+      <input type="text" id="ubicacion" placeholder="¿Dónde está ubicado tu proyecto?" required>
+
+      <label for="fecha">Fecha de finalización</label>
+      <input type="date" id="fecha" required>
+
+      <label for="imagen">Imagen del proyecto</label>
+      <input type="file" id="imagen" accept="image/*">
+
+      <button type="submit">Crear campaña</button>
+    </form>
+  </div>
+
+  <script src="js/crear-campaña.js"></script>
+</body>
+</html>

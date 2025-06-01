@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil del Usuario</title>
+  <link rel="stylesheet" href="auth.css">
+  <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Tu perfil</h2>
+    <form id="perfilForm">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" placeholder="Tu nombre completo" required>
+
+      <label for="descripcion">Descripción</label>
+      <textarea id="descripcion" placeholder="Describe tu proyecto o intereses" rows="4"></textarea>
+
+      <button type="submit" class="btn-guardar">Guardar cambios</button>
+    </form>
+    <p><a href="dashboard.html">← Volver al panel</a></p>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/perfil.js"></script>
+</body>
+</html>
